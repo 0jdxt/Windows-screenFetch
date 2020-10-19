@@ -60,5 +60,9 @@ Function Screenfetch($distro)
             Write-Host $SystemInfoCollection[$line];            
         }
     }
+	
+	for ($line = $SystemInfoCollection.Count; $line -lt $AsciiArt.Length; $line++) 
+    {
+		Write-Host $AsciiArt[$line] -f Cyan;
+	}
 }
-
